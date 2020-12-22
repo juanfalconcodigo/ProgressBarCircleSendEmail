@@ -380,7 +380,7 @@
     <!-- color image edit : #09b83e;#00cc33 oficial test -->
     <div style="width:100%;display: flex;height:120px;">
         <div style="width:120px;height: 120px;">
-            <img style="width: 120px;height: 120px;max-height: 120px;" alt="10percent" src="https://res.cloudinary.com/dbxg3ojl8/image/upload/v1608313970/verde_10_s6bqyv.png" />
+            <img style="width: 120px;height: 120px;max-height: 120px;" alt="10percent" src="https://res.cloudinary.com/dvloq0utc/image/upload/v1608558923/verde_10_jdtfnz.png" />
         </div>
         <div style="width: 200px;height:120px;display: table;margin-left: 10px;float: left;">
             <div style="display: table-cell;
@@ -391,9 +391,52 @@
         </div>
     </div>
 
+    <div style="width:100%;display: flex;height:120px;">
+        <div style="width:120px;height: 120px;position: relative;">
+            <img style="width: 120px;height: 120px;max-height: 120px;" alt="10percent" src="https://res.cloudinary.com/dvloq0utc/image/upload/v1608578315/greennew_10_czpom0.png" />
+            <div style="position: absolute;top:44px;width: 100%;">
+                <p style="margin: 0px;font-weight: bold;text-align: center;background:transparent;font-size: 14px;">0%
+                </p>
+                <p style="margin: 0px;font-weight: bold;text-align: center;background:transparent;font-size: 14px;">
+                    remaining</p>
+            </div>
+        </div>
+        <div style="width: 200px;height:120px;display: table;margin-left: 10px;float: left;">
+            <div style="display: table-cell;
+        vertical-align: middle;font-size: 12px;width:100%;">
+                <p>7 days to go</p>
+                <p>630GB used of 700GB</p>
+            </div>
+        </div>
+    </div>
+
+    <!--  mi tablita -->
+    <div style="width:100%;display: flex;height:120px;">
+        <table width="120" cellpadding=3 cellspacing=2 background="https://res.cloudinary.com/dvloq0utc/image/upload/v1608653430/greenmin_10_pjjoqy.png" height="120">
+            <tr>
+                <td>
+                    <p style="margin: 0px;font-weight: bold;text-align: center;background:transparent;font-size: 12px;">
+                        10%
+                    </p>
+                    <p style="margin: 0px;font-weight: bold;text-align: center;background:transparent;font-size: 12px;">
+                        remaining</p>
+                </td>
+            </tr>
+        </table>
+        <div style="width: 200px;height:120px;display: table;margin-left: 10px;">
+            <div style="display: table-cell;
+        vertical-align: middle;font-size: 12px;width:100%;">
+                <p>7 days to go</p>
+                <p>630GB used of 700GB</p>
+            </div>
+        </div>
+    </div>
+    <!-- https://res.cloudinary.com/dvloq0utc/image/upload/v1608654308/greennewmin_0_kgfedy.png -->
+    <!-- end tablita -->
+
     <div style="width:100%;display: block;height:120px;">
         <div style="width:120px;float: left;height: 120px;">
-            <img style="width: 100%;height: 100%;" alt="0percent" src="https://res.cloudinary.com/dbxg3ojl8/image/upload/v1608313970/verde_0_h6cptu.png" />
+            <img style="width: 100%;height: 100%;" alt="0percent" src="https://res.cloudinary.com/dvloq0utc/image/upload/v1608558923/verde_0_y6imaz.png" />
         </div>
         <div style="width: 150px;height:120px;display: table;margin-left: 10px;float: left;">
             <div style="display: table-cell;
@@ -419,6 +462,30 @@
                 <p>630GB used of 700GB</p>
             </div>
         </div>
+    </div>
+    #end #if( $percent == 10 || $percent == 0 )
+    <div style="width:100%;display: flex;height:120px;">
+        #if( $percent == 10 )
+        <table width="120" cellpadding=3 cellspacing=2 background="https://res.cloudinary.com/dvloq0utc/image/upload/v1608653430/greenmin_10_pjjoqy.png" height="120">
+            #end #if( $percent == 0 )
+            <table width="120" cellpadding=3 cellspacing=2 background="https://res.cloudinary.com/dvloq0utc/image/upload/v1608654308/greennewmin_0_kgfedy.png" height="120">
+                #end
+                <tr>
+                    <td>
+                        <p style="margin: 0px;font-weight: bold;text-align: center;background:transparent;font-size: 12px;">
+                            ${percent}%
+                        </p>
+                        <p style="margin: 0px;font-weight: bold;text-align: center;background:transparent;font-size: 12px;">
+                            remaining</p>
+                    </td>
+                </tr>
+            </table>
+            <div style="width: 200px;height:120px;display: table;margin-left: 10px;">
+                <div style="display: table-cell;vertical-align: middle;font-size: 12px;width:100%;">
+                    <p>7 days to go</p>
+                    <p>630GB used of 700GB</p>
+                </div>
+            </div>
     </div>
     #end
 
